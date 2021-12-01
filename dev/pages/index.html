@@ -1,0 +1,98 @@
+@layout(default)
+
+@section(body)
+	<main class="tamu" v-cloak @mounted='ambilData'>
+		<h1>Tamu Undangan</h1>
+
+		<section class="isi">
+
+			<form action="" @submit.prevent='kirim'>
+				<label for="nama">Nama</label>
+				<input type="text" v-model='nama' id="nama" required>
+				<label for="alamat">Alamat</label>
+				<input type="text" v-model='alamat' id="alamat" required>
+				<input type="submit" value="Kirim">
+			</form>
+
+			<section>
+				<table>
+					<thead>
+						<tr>
+							<th>Nama</th>
+							<th>Alamat</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr v-for='x in data'>
+							<td>{{x.nama}}</td>
+							<td>{{x.alamat}}</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+		</section>
+	</main>
+
+	<script type="module">
+		import excalibur from '/excalibur.js'
+
+		const id = '55cf49407f5c50d34f7fa8d74ee831ba'
+		const server = 'https://excalibur.nasihosting.com/sql.php'
+
+		PetiteVue.createApp({
+			nama: '',
+			alamat: '',
+			data: [],
+			async ambilData(){
+				let datanya = await excalibur(server, {
+					id,
+					kunci: 'ambil'
+				})
+				datanya = await datanya.json()
+				this.data = datanya
+			},
+			async kirim(){
+				const kirimData = await excalibur(server, {
+					id,
+					kunci: 'kirim',
+					nama: this.nama,
+					alamat: this.alamat
+				})
+				if (kirimData) {
+					this.nama = ''
+					this.alamat = ''
+					this.ambilData()
+				}
+			}
+		}).mount('.tamu')
+	</script>
+
+	<style lang="windi">
+		[v-cloak] {
+			@apply hidden
+		}
+
+		.tamu {
+			@apply p-5 px-[30%]
+		}
+		.tamu h1 {
+			@apply text-center text-2xl pb-5
+		}
+		.tamu .isi {
+			@apply grid grid-cols-2
+		}
+		.tamu :where(label, [type='text']) {
+			@apply block
+		}
+		.tamu [type='text'] {
+			@apply border-gray-300 border focus:(outline-none border-gray-500) py-1 px-2
+		}
+		.tamu :where(td, th) {
+			@apply border border-green-500 p-2 text-center
+		}
+		.tamu [type='submit'] {
+			@apply mt-3 bg-violet-500 px-2 py-1 text-white cursor-pointer
+		}
+	</style>
+@endsection

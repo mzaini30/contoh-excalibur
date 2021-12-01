@@ -1,0 +1,16 @@
+{
+  "name": "latihan-excalibur",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ssg --watch",
+    "build": "ssg"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mini-ssg-zen": "^0.5.1"
+  }
+}

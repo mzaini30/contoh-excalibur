@@ -1,0 +1,154 @@
+*, ::before, ::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: #e5e7eb;
+}
+* {
+  --tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgba(59, 130, 246, 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+}
+:root {
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+}
+:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+::moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+  height: auto;
+}
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+[type='search'] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+abbr[title] {
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+}
+body {
+  margin: 0;
+  font-family: inherit;
+  line-height: inherit;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+  font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  line-height: 1.5;
+}
+h1 {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+input {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+}
+input::placeholder {
+  opacity: 1;
+  color: #9ca3af;
+}
+input::webkit-input-placeholder {
+  opacity: 1;
+  color: #9ca3af;
+}
+input::-moz-placeholder {
+  opacity: 1;
+  color: #9ca3af;
+}
+input:-ms-input-placeholder {
+  opacity: 1;
+  color: #9ca3af;
+}
+input::-ms-input-placeholder {
+  opacity: 1;
+  color: #9ca3af;
+}
+table {
+  text-indent: 0;
+  border-color: inherit;
+  border-collapse: collapse;
+}
+[v-cloak] {
+  display: none;
+}
+.tamu {
+  padding: 1.25rem;
+  padding-left: 30%;
+  padding-right: 30%;
+}
+.tamu h1 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  padding-bottom: 1.25rem;
+  text-align: center;
+}
+.tamu .isi {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.tamu :where(label, [type='text']) {
+  display: block;
+}
+.tamu [type='text'] {
+  --tw-border-opacity: 1;
+  border-color: rgba(209, 213, 219, var(--tw-border-opacity));
+  border-width: 1px;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.tamu [type='text']:focus {
+  --tw-border-opacity: 1;
+  border-color: rgba(107, 114, 128, var(--tw-border-opacity));
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+.tamu :where(td, th) {
+  --tw-border-opacity: 1;
+  border-color: rgba(16, 185, 129, var(--tw-border-opacity));
+  border-width: 1px;
+  padding: 0.5rem;
+  text-align: center;
+}
+.tamu [type='submit'] {
+  --tw-bg-opacity: 1;
+  background-color: rgba(139, 92, 246, var(--tw-bg-opacity));
+  cursor: pointer;
+  margin-top: 0.75rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
